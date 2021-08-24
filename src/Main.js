@@ -1,34 +1,25 @@
-import {useState} from 'react';
-
-// import Api from './Api';
 
 function Main (props) {
-  const [query, setQuery] = useState('');
 
-  const handleChange = (e) => {
-    console.log('change!');
-    setQuery(e.target.value);
-  };
-
-  // const handleClick = () => {
-  //   console.log('click!', query);
-  // };
-
+  const lat = props.location.lat;
+  const lon = props.location.lon;
+  // const bBox = props.location.boundingBox;
   return (
     <main>
       <section id="search">
         <input
-          onChange={handleChange}
-          type="text" value={query}
+          onChange={props.handleChange}
+          type="text"
           placeholder="City Name"
         ></input>
         <button onClick={props.getLocation}>Search</button>
       </section>
+      {props.location.lat &&
       <section id="display">
-        {props.location &&
-          <h2>{props.location.display_name}</h2>
-        }
+        <h2>{lat} {lon}</h2>
+        <img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_EXPLORER_KEY}&center=${lat},${lon}&zoom=${10}`} alt="i'm a map"></img>
       </section>
+      }
     </main>
   );
 }
