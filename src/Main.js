@@ -1,6 +1,6 @@
 
 function Main (props) {
-
+  // latitude and longitude from props
   const lat = props.location.lat;
   const lon = props.location.lon;
   // const bBox = props.location.boundingBox;
