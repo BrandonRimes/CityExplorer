@@ -10,7 +10,10 @@
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+[Trello](https://trello.com/b/UvI9L0rq)
+
+![Web Request/Response Cycle](./img/wrrc.png)
 
 ## Change Log
 
